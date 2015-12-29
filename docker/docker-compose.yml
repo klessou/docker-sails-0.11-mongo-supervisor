@@ -1,0 +1,10 @@
+sails:
+  build: sails/
+  ports:
+   - "1337:1337"
+  volumes:
+   - ../sails:/server:rw
+  links:
+   - mongo
+mongo:
+  image: mongo
